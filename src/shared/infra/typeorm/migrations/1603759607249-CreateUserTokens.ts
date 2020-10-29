@@ -24,6 +24,16 @@ export default class CreateUserTokens1603759607249
                         name: 'user_id',
                         type: 'uuid',
                     },
+                    {
+                        name: 'created_at',
+                        type: 'timestamp',
+                        default: 'now()',
+                    },
+                    {
+                        name: 'updated_at',
+                        type: 'timestamp',
+                        default: 'now()',
+                    },
                 ],
                 foreignKeys: [
                     {
