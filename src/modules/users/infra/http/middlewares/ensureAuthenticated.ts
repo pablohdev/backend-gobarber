@@ -4,7 +4,7 @@ import authConfig from '@config/auth';
 
 import AppError from '@shared/errors/AppError';
 
-interface TokenPlayload {
+interface ITokenPlayload {
     iat: number;
     exp: number;
     sub: string;
@@ -28,7 +28,7 @@ export default function ensureAuthenticated(
     try {
         const decoded = verify(token, authConfig.jwt.secret);
 
-        const { sub } = decoded as TokenPlayload;
+        const { sub } = decoded as ITokenPlayload;
 
         req.user = {
             id: sub,
