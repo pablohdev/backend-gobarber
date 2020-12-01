@@ -13,6 +13,7 @@ describe('CreateUser', () => {
     beforeEach(() => {
         fakeUsersRepository = new FakeUsersRepository();
         fakeHashProvider = new FakeHashProvider();
+        fakeCacheProvider = new FakeCacheProvider();
         createUser = new CreateUserServices(
             fakeUsersRepository,
             fakeHashProvider,

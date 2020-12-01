@@ -11,6 +11,7 @@ describe('ListProviderAppointments', () => {
 
     beforeEach(() => {
         fakeAppointmentRepository = new FakeAppointmentRepository();
+        fakeCacheProvider = new FakeCacheProvider();
         listProviderAppointments = new ListProviderAppointmentsService(
             fakeAppointmentRepository,
             fakeCacheProvider,

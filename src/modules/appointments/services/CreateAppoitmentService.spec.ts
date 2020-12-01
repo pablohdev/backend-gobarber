@@ -14,6 +14,7 @@ describe('CreateAppoitment', () => {
     beforeEach(() => {
         fakeAppointmentRepository = new FakeAppointmentRepository();
         fakeNotificationsRepository = new FakeNotificationsRepository();
+        fakeCacheProvider = new FakeCacheProvider();
         createAppointment = new CreateAppointmentServices(
             fakeAppointmentRepository,
             fakeNotificationsRepository,

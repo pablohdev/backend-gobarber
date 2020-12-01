@@ -10,6 +10,7 @@ describe('List Providers', () => {
 
     beforeEach(() => {
         fakeUsersRepository = new FakeUsersRepository();
+        fakeCacheProvider = new FakeCacheProvider();
         listProviders = new ListProvidersService(
             fakeUsersRepository,
             fakeCacheProvider,
